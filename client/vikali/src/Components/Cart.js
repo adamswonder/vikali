@@ -5,7 +5,9 @@ function Cart() {
     return (
         <div className='product-container'>
             {products.filter((product) => product.discount >= 50)
-            }
+                .map((product) => {
+                    return <ProductCard key={product.id} product={product}/>
+            })}
         </div>
     );
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 
-function ProductCard({product, cartIt}) {
+export default function ProductCard({product, cartIt}) {
   return (
     <div class= "product-card">
       <div class="product-image">
@@ -17,4 +17,3 @@ function ProductCard({product, cartIt}) {
   )
 }
 
-export default ProductCard

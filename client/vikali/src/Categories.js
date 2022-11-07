@@ -6,6 +6,12 @@ function Categories() {
         <NavLink to="/" exact activeClassName="current">
             Home
         </NavLink>
+        <NavLink to="/electronics" activeClassName="current">
+            Electronics
+        </NavLink>
+        <NavLink to="/fashion" activeClassName="current">
+            Fashion
+        </NavLink>
     </nav>
 }
 

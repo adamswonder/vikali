@@ -15,3 +15,6 @@ function Fashion({ products, cartIt }){
       </div>
     );
   }
+
+  export default Fashion
+  

@@ -1,4 +1,4 @@
-import logo from '../logo.svg';
+// import logo from '../logo.svg';
 import React, { useEffect, useState } from "react";
 import { Switch, Route } from "react-router-dom";
 import Categories from "./Categories";
@@ -21,7 +21,7 @@ function App() {
       .then((resp) => resp.json())
       .then((data) => setProducts(data))
       .catch((err) => console.log(err));
-  }, []);
+  },[]);
 
   function addToCart(product) {
     if (!cart.includes(product)) {
@@ -35,7 +35,6 @@ function App() {
   }
   return (
     <div className="App">
-      <Home />
       {/* <Announcement /> */}
       <NavBar searchChange={setSearch} />
       <Categories />
@@ -58,8 +57,8 @@ function App() {
         <Route path="/cart">
           <Cart products={cart} />
         </Route>
-      </Switch>
-      <header className="App-header">
+      </Switch> 
+      {/* {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -72,7 +71,7 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+      </header> */}
     </div>
   );
 }

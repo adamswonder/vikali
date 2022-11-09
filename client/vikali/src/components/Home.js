@@ -8,7 +8,8 @@ function Home({ products, cartIt, search }) {
             <div className='all-products'>
                 <h2 id='title'>Top Deals!</h2>
                 <div className="all-products-container">
-                    {products.filter(product => product.title.toLowerCase().includes(search))
+                    {products
+                        .filter(product => product.title.toLowerCase().includes(search.toLowerCase()))
                         .filter((product) => product.discount >= 50)
                         .map((product) => {
                             return (
@@ -20,7 +21,8 @@ function Home({ products, cartIt, search }) {
             <div className='all-products'>
                 <h2 id='title'>Electronics</h2>
                 <div className="all-products-container">
-                    {products.filter(product => product.category === "Electronics" && product.discount >= 4)
+                    {products
+                        .filter(product => product.category === "Electronics" && product.discount >= 4)
                         .map(product => {
                             return <ProductCard product={product} cartIt={cartIt} />
                         })

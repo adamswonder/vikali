@@ -1,10 +1,10 @@
 import React from 'react'
-import ProductCard from '../Components/ProductCard'
+import ProductCard from './ProductCard'
 import "./Home.css"
 
 function Home({ products, cartIt, search }) {
     return (
-        <div className='homeContainer'>
+        <div className='home'>
             <div className='all-products'>
                 <h2 id='title'>Top Deals!</h2>
                 <div className="all-products-container">

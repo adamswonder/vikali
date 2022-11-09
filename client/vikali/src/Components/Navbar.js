@@ -15,7 +15,7 @@ function NavBar({searchChange}) {
         />
       </div>
       <div className="right">
-        <NavLink to="/cart">Cart</NavLink>
+      <NavLink to="/cart" className="cart"><i class="fa-solid fa-cart-shopping"></i> Cart</NavLink>
       </div>
     </div>
   );

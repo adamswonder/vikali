@@ -1,7 +1,7 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+// import { NavLink } from 'react-router-dom'
 import ProductCard from './ProductCard'
-import './Product.css'
+import './Products.css'
 
 
 

@@ -1,7 +1,7 @@
 import logo from '../logo.svg';
 import React, { useEffect, useState } from "react";
 import { Switch, Route } from "react-router-dom";
-import Categories from "./";
+import Categories from "./Categories";
 import NavBar from "./Navbar";
 import Electronics from "./Electronics";
 import Fashion from "./Fashion";
@@ -36,7 +36,7 @@ function App() {
   return (
     <div className="App">
       <Home />
-      <Announcement />
+      {/* <Announcement /> */}
       <NavBar searchChange={setSearch} />
       <Categories />
       <Switch>

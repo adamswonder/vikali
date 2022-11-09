@@ -1,0 +1,17 @@
+.home {
+    margin: -40px auto;
+}
+.all-products {
+    margin: 0 auto;
+    padding: 50px;
+    display: grid;
+}
+.all-products-container {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;    
+    margin: auto;
+}
+#title {
+    padding-left: 11%;
+}

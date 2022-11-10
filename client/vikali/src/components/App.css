@@ -116,11 +116,28 @@ a.current {
   cursor: pointer;
   opacity: 0;
 }
+#review-btn {
+  margin-top: 10%;
+  bottom: 10px;
+  padding: 10px;
+  text-transform: capitalize;
+  border: none;
+  outline: none;
+  background: #fff;
+  border-radius: 5px;
+  transition: 0.5s;
+  cursor: pointer;
+  /* color: #fff; */
+}
 
 .product-card:hover .card-btn {
   opacity: 1;
 }
 .card-btn:hover {
+  background: #ff7d7d;
+  color: #fff;
+}
+#review-btn:hover {
   background: #ff7d7d;
   color: #fff;
 }

@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom'
 function Categories() {
     return (
         <nav className="categories">
-            <NavLink to="/" exact activeClassName="current">
+            <NavLink to="/products" exact activeClassName="current">
                 Home
             </NavLink>
             <NavLink to="/electronics" activeClassName="current">

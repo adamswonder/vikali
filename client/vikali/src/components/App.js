@@ -26,7 +26,7 @@ function App() {
   function addToCart(product) {
     if (!cart.includes(product)) {
       setCart([...cart, product])
-      fetch("https://drip-mall-project.herokuapp.com/cart", {
+      fetch("http://localhost:9292/cart", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(product)
@@ -39,7 +39,7 @@ function App() {
       <NavBar searchChange={setSearch} />
       <Categories />
       <Switch>
-        <Route path="/" exact>
+        <Route path="/products" exact>
           <Home products={products} search={search} cartIt={addToCart} />
         </Route>
         <Route path="/electronics">

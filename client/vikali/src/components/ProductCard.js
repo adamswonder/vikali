@@ -12,7 +12,7 @@ export default function ProductCard({product, cartIt}) {
       <div class="product-info">
         <h2 class="product-brand">{product.title}</h2>
         <span class="price">${product.price}</span>
-        <span class="actual-price">${product.actual}</span>
+        <span class="actual-price">${product.actual_price}</span>
       </div>
     </div>
   )

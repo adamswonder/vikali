@@ -17,7 +17,7 @@ function App() {
   const [search, setSearch] = useState("")
 
   useEffect(() => {
-    fetch("https://drip-mall-project.herokuapp.com/products")
+    fetch("http://localhost:9292/products")
       .then((resp) => resp.json())
       .then((data) => setProducts(data))
       .catch((err) => console.log(err));

@@ -4,23 +4,23 @@ import { NavLink } from 'react-router-dom'
 
 function Categories() {
     return (
-        <nav className="categories">
-            <NavLink to="/" exact activeClassName="current">
-                Home
-            </NavLink>
-            <NavLink to="/electronics" activeClassName="current">
-                Electronics
-            </NavLink>
-            <NavLink to="/fashion" activeClassName="current">
-                Fashion
-            </NavLink>
-            <NavLink to="/shoes" activeClassName="current">
-                Shoes
-            </NavLink>
-            <NavLink to="/groceries" activeClassName="current">
-                Groceries
-            </NavLink>
-        </nav>
+      <nav ActiveClassName="categories">
+        <NavLink to="/app/products" ActiveClassName="current">
+          Home
+        </NavLink>
+        <NavLink to="/app/electronics" ActiveClassName="current">
+          Electronics
+        </NavLink>
+        <NavLink to="/app/fashion" ActiveClassName="current">
+          Fashion
+        </NavLink>
+        <NavLink to="/app/shoes" ActiveClassName="current">
+          Shoes
+        </NavLink>
+        <NavLink to="/app/groceries" ActiveClassName="current">
+          Groceries
+        </NavLink>
+      </nav>
     );
 }
 

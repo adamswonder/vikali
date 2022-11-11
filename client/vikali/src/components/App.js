@@ -10,6 +10,7 @@ import Shoes from "./Shoes";
 import Cart from "./Cart";
 import Home from './Home'
 import './App.css';
+import Footer from "./Footer";
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -58,6 +59,7 @@ function App() {
           <Cart products={cart} />
         </Route>
       </Switch> 
+      <Footer/>
       {/* {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>

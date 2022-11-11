@@ -14,8 +14,9 @@ import './App.css';
 function App() {
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState([]);
-  const [search, setSearch] = useState("")
-
+  const [search, setSearch] = useState("");
+  
+  // Fetches all products
   useEffect(() => {
     fetch("http://localhost:9292/products")
       .then((resp) => resp.json())
@@ -23,6 +24,7 @@ function App() {
       .catch((err) => console.log(err));
   },[]);
 
+  // this function adds product to cart
   function addToCart(product) {
     if (!cart.includes(product)) {
       setCart([...cart, product])
@@ -33,6 +35,7 @@ function App() {
       });
     }
   }
+
   return (
     <div className="App">
       {/* <Announcement /> */}

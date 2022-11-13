@@ -15,6 +15,7 @@ import Footer from "./Footer";
 function App() {
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState([]);
+  const [counter, setCounter] = useState(0)
   const [search, setSearch] = useState("");
 
   useEffect(() => {
@@ -24,13 +25,10 @@ function App() {
       .catch((err) => console.log(err));
   }, []);
   function addToCart(product) {
+    console.log(product)
     if (!cart.includes(product)) {
+      setCounter(counter =+1)
       setCart([...cart, product]);
-      // fetch("http://localhost:9292/cart", {
-      //   method: "POST",
-      //   headers: { "Content-Type": "application/json" },
-      //   body: JSON.stringify(product),
-      // });
     }
   }
   return (

@@ -10,6 +10,7 @@ import Shoes from "./Shoes";
 import Cart from "./Cart";
 import Home from "./Home";
 import "./App.css";
+import Footer from "./Footer";
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -22,20 +23,19 @@ function App() {
       .then((data) => setProducts(data))
       .catch((err) => console.log(err));
   }, []);
-
   function addToCart(product) {
     if (!cart.includes(product)) {
       setCart([...cart, product]);
-      fetch("http://localhost:9292/cart", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(product),
-      });
+      // fetch("http://localhost:9292/cart", {
+      //   method: "POST",
+      //   headers: { "Content-Type": "application/json" },
+      //   body: JSON.stringify(product),
+      // });
     }
   }
   return (
     <div className="App">
-      <NavBar searchChange={setSearch} />
+      <NavBar searchChange={setSearch} cart={cart} />
       <Categories />
       <Routes>
         <Route
@@ -62,6 +62,7 @@ function App() {
         />
         <Route path="/cart" element={<Cart products={cart} />} />
       </Routes>
+      <Footer />
     </div>
   );
 }

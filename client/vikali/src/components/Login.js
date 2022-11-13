@@ -60,7 +60,7 @@ function Login() {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
-            <button type="submit">Login</button>
+            <button className="login-button" type="submit">Login</button>
             <div className="link">
               <Link to="/signup">New to Vikali? Sign Up Here</Link>
             </div>

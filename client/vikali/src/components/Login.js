@@ -3,7 +3,6 @@ import { useNavigate, Link } from "react-router-dom";
 import "./login.css";
 
 function Login() {
-  console.log("login");
   const navigate = useNavigate();
   const [users, setUsers] = useState([])
   const [name, setUserName] = useState(null);
@@ -33,7 +32,6 @@ function Login() {
     } else {
       alert("Wrong credentials, Please check username or password");
     }
-    e.form.reset()
   }
 
   return (
@@ -46,6 +44,7 @@ function Login() {
           <div className="container">
             <label>Username : </label>
             <input
+              className="login-input"
               type="text"
               placeholder="Enter Username"
               name="name"
@@ -54,13 +53,16 @@ function Login() {
             />
             <label>Password : </label>
             <input
+              className="login-input"
               type="password"
               placeholder="Enter Password"
               name="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
-            <button type="submit">Login</button>
+            <button className="login-button" type="submit">
+              Login
+            </button>
             <div className="link">
               <Link to="/signup">New to Vikali? Sign Up Here</Link>
             </div>

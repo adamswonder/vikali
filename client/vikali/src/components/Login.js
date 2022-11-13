@@ -40,8 +40,7 @@ function Login() {
     <div>
       <div className="login-body">
         <center>
-          {" "}
-          <h1> Vikali </h1>{" "}
+          <h1> Vikali </h1>
         </center>
         <form onSubmit={handleSubmit} className="form">
           <div className="container">

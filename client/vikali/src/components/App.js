@@ -1,6 +1,6 @@
 // import logo from '../logo.svg';
 import React, { useEffect, useState } from "react";
-import { Switch, Route } from "react-router-dom";
+import { BrowserRouter as Switch, Route } from "react-router-dom";
 import Categories from "./Categories";
 import NavBar from "./Navbar";
 import Electronics from "./Electronics";

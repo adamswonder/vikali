@@ -1,11 +1,10 @@
 .footer{
-    display: flex;
+    display: flexbox;
 	background-color: #000;
 	color: white;
-	/* padding: 50px; */
-    width: 100%;
-    position: relative;
-    padding-top: 30px;
+    max-width: 100%;
+    padding-top: 10px;
+    margin-top: 10%;
     
 }
 .first-sectoion{
@@ -20,10 +19,6 @@ i {
 .footer-links{
      display: grid;
     grid-template-columns: 1.3fr repeat(1, 1fr) 1fr;
-    /* margin-left: 40px;  */
-    /* display: flex;
-    margin-left: 30px;
-    justify-items: center; */
     padding-left: 30px;
     gap: 1.3rem;
 }

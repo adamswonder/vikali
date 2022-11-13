@@ -14,6 +14,7 @@ import "./App.css";
 function App() {
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState([]);
+  const [counter, setCounter] = useState(0)
   const [search, setSearch] = useState("");
 
   useEffect(() => {
@@ -24,18 +25,15 @@ function App() {
   }, []);
 
   function addToCart(product) {
+    console.log(product)
     if (!cart.includes(product)) {
+      setCounter(counter =+1)
       setCart([...cart, product]);
-      fetch("http://localhost:9292/cart", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(product),
-      });
     }
   }
   return (
     <div className="App">
-      <NavBar searchChange={setSearch} />
+      <NavBar searchChange={setSearch} counter={counter}/>
       <Categories />
       <Routes>
         <Route

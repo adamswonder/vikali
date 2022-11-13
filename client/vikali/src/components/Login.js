@@ -11,7 +11,7 @@ function Login() {
   const [authenticate, setAuthenticate] = useState(
     localStorage.getItem(localStorage.getItem("authenticate" || false))
   );
-  
+
   useEffect(() => {
     fetch("http://localhost:9292/users")
       .then((resp) => resp.json())
@@ -29,10 +29,11 @@ function Login() {
 
     if (people && people.password === password) {
       localStorage.setItem("authenticate", true);
-      navigate("/app");
+      navigate("/app/products");
     } else {
       alert("Wrong credentials, Please check username or password");
     }
+    e.form.reset()
   }
 
   return (
@@ -61,7 +62,9 @@ function Login() {
               onChange={(e) => setPassword(e.target.value)}
             />
             <button type="submit">Login</button>
-            <Link to="/signup">New to Vikali? Sign Up here</Link>
+            <div className="link">
+              <Link to="/signup">New to Vikali? Sign Up Here</Link>
+            </div>
           </div>
         </form>
       </div>

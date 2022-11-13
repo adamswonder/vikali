@@ -12,12 +12,12 @@ function Signup() {
     localStorage.getItem(localStorage.getItem("authenticate" || false))
   );
 
-  function handleSubmit(event) {
+  function handleSubmit(e) {
     // Creates a new User
     if (name == null || password == null) {
       alert("You missed something");;
     } else {
-      event.preventDefault();
+      e.preventDefault();
       fetch("http://localhost:9292/users", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -27,6 +27,7 @@ function Signup() {
       alert("Account created successfully.Proceed to Login");
       navigate("/");
     }
+    e.form.reset();
   }
   // Testing merge conflict
 

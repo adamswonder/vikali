@@ -1,26 +1,28 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
-
 function Categories() {
+  let activeStyle = {
+    color: "orange",
+  };
     return (
-        <nav className="categories">
-            <NavLink to="/products" exact activeClassName="current">
-                Home
-            </NavLink>
-            <NavLink to="/electronics" activeClassName="current">
-                Electronics
-            </NavLink>
-            <NavLink to="/fashion" activeClassName="current">
-                Fashion
-            </NavLink>
-            <NavLink to="/shoes" activeClassName="current">
-                Shoes
-            </NavLink>
-            <NavLink to="/groceries" activeClassName="current">
-                Groceries
-            </NavLink>
-        </nav>
+      <nav className="categories">
+        <NavLink to="/app/products" style={({isActive}) => isActive ? activeStyle : undefined}>
+          Home
+        </NavLink>
+        <NavLink to="/app/electronics" style={({isActive}) => isActive ? activeStyle : undefined}>
+          Electronics
+        </NavLink>
+        <NavLink to="/app/fashion" style={({isActive}) => isActive ? activeStyle : undefined}>
+          Fashion
+        </NavLink>
+        <NavLink to="/app/shoes" style={({isActive}) => isActive ? activeStyle : undefined}>
+          Shoes
+        </NavLink>
+        <NavLink to="/app/groceries" style={({isActive}) => isActive ? activeStyle : undefined}>
+          Groceries
+        </NavLink>
+      </nav>
     );
 }
 

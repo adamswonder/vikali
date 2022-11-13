@@ -12,10 +12,12 @@
     
 }
 
-i {
+.f-social i{
     padding: 5px;
-    background-color: #fafafa;
+    border-radius: 20px;
+    background-color: white;
 }
+
 .footer-links{
      display: grid;
     grid-template-columns: 1.3fr repeat(1, 1fr) 1fr;

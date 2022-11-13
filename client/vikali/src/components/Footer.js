@@ -57,9 +57,9 @@ export default function Footer() {
         <div className='about'>
           <h3>Payment Method</h3>
           <ul>
-            <li><i class="fa-brands fa-cc-visa">Visa</i></li>
-            <li><i class="fa-brands fa-cc-mastercard">MasterCard</i></li>
-            <li><i class="fa-brands fa-paypal">Paypal</i></li>
+            <li><i class="fa-brands fa-cc-visa"> Visa</i></li>
+            <li><i class="fa-brands fa-cc-mastercard"> MasterCard</i></li>
+            <li><i class="fa-brands fa-paypal"> Paypal</i></li>
           </ul>
         </div>
         <div className='subscribe'>
@@ -70,7 +70,7 @@ export default function Footer() {
         </div>
       </div>
       <div class="ending">
-        <p>©2022,Copyright: vikali.com or its affilliates <br></br>All rights reserved,terms and conditions applied</p>
+        <p>© 2022 vikali.com or its affilliates | All rights reserved,terms and conditions applied</p>
       </div>
     </div >
   )

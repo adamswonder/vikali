@@ -8,6 +8,7 @@ function NavBar({searchChange, cart}) {
         VIKALI
       </NavLink>
       <input
+        id="search"
         type="text"
         placeholder="Search here ..."
         onChange={(e) => searchChange(e.target.value)}

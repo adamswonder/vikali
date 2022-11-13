@@ -28,15 +28,14 @@ li i{
     background-color: black;
 }
 .about{
-    
     /* padding: 30px; */
     font-size: large;
 }
-.subscribe{
-    /* margin-left: 20px;
-    display: flex; */
-    /* height: 3px; */
-}
+/* .subscribe{
+    margin-left: 20px;
+    display: flex;
+    height: 3px;
+} */
 
 
 .ending{

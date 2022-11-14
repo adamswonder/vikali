@@ -5,6 +5,7 @@ import "./login.css";
 function Login() {
   console.log("login");
   const navigate = useNavigate();
+  const [user, setUser] = useState({})
   const [users, setUsers] = useState([])
   const [name, setUserName] = useState(null);
   const [password, setPassword] = useState(null);
@@ -28,6 +29,8 @@ function Login() {
     const people = users.find((item) => item.name === name);
 
     if (people && people.password === password) {
+      setUser(people)
+      console.log(user);
       localStorage.setItem("authenticate", true);
       navigate("/app/products");
     } else {

@@ -65,7 +65,7 @@ function Login() {
             </button>
             <div className="link">
               <Link to="/signup">New to Vikali? Sign Up here</Link>
-              <p>Login credentials- Username:Delphia Torp Password:BjBmG8bVuG</p>
+              <p>Login credentials- <br></br>Username:Delphia Torp <br></br>Password:BjBmG8bVuG</p>
             </div>
           </div>
         </form>

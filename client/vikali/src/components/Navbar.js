@@ -14,7 +14,9 @@ function NavBar({ searchChange, cart }) {
         onChange={(e) => searchChange(e.target.value)}
       />
       <NavLink to="/" className="cart">
-        <i class="fa-solid fa-user"></i> Account
+        <i class="fa-solid fa-user"></i>
+        <br />
+        Account
       </NavLink>
       <NavLink to="/app/cart" className="cart">
         <i class="fa-solid fa-cart-shopping"></i>

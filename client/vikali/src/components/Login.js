@@ -64,7 +64,7 @@ function Login() {
               Login
             </button>
             <div className="link">
-              <Link to="/signup">New to Vikali? Sign Up Here</Link>
+              <Link to="/signup">New to Vikali? Sign Up here</Link>
             </div>
           </div>
         </form>

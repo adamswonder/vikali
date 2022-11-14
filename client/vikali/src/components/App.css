@@ -87,11 +87,9 @@ a.current {
   height: 100%;
   object-fit: cover;
 }
-.supscript{
-  /* color: white; */
-  /* background-color: white; */
+sup.supscript{
   font-size: medium;
-  border-radius: 7px;
+  text-decoration: none;
 }
 .discount-tag {
   position: absolute;

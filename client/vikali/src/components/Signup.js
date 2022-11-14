@@ -18,7 +18,7 @@ function Signup() {
       alert("You missed something");;
     } else {
       e.preventDefault();
-      fetch("http://localhost:9292/users", {
+      fetch("https://tranquil-hollows-52790.herokuapp.com/users", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name: name, password: password}),

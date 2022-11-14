@@ -13,7 +13,7 @@ function Login() {
   );
 
   useEffect(() => {
-    fetch("http://localhost:9292/users")
+    fetch("https://tranquil-hollows-52790.herokuapp.com/users")
       .then((resp) => resp.json())
       .then((data) => setUsers(data))
       .catch((err) => console.log(err));

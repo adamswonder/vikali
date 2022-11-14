@@ -18,7 +18,7 @@ function App() {
   const [search, setSearch] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:9292/products")
+    fetch("https://tranquil-hollows-52790.herokuapp.com/products")
       .then((resp) => resp.json())
       .then((data) => setProducts(data))
       .catch((err) => console.log(err));

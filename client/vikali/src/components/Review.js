@@ -18,7 +18,7 @@ function Review({ product }) {
       user_id: 16,
     };
     console.log(formData);
-    fetch(`http://localhost:9292/reviews`, {
+    fetch(`https://tranquil-hollows-52790.herokuapp.com/reviews`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),
@@ -32,7 +32,7 @@ function Review({ product }) {
 
   //Here we perform a get request using useEffect :)
   useEffect(() => {
-    fetch(`http://localhost:9292/reviews`)
+    fetch(`https://tranquil-hollows-52790.herokuapp.com/reviews`)
       .then((resp) => resp.json())
       .then((reviews) => {
         setGetReviews(reviews);

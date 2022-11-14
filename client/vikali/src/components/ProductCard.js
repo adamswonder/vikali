@@ -9,7 +9,7 @@ export default function ProductCard({ product, cartIt }) {
 
   // performs a side effect to post new reviews from addReview function 
   useEffect(() => {
-    fetch("http://localhost:9292/reviews", {
+    fetch("https://tranquil-hollows-52790.herokuapp.com/reviews", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify()

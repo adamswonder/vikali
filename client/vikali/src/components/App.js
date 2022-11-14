@@ -1,6 +1,6 @@
 // import logo from '../logo.svg';
 import React, { useEffect, useState } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Form } from "react-router-dom";
 import Categories from "./Categories";
 import NavBar from "./Navbar";
 import Electronics from "./Electronics";
@@ -18,7 +18,7 @@ function App() {
   const [search, setSearch] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:9292/products")
+    fetch("https://tranquil-hollows-52790.herokuapp.com/products")
       .then((resp) => resp.json())
       .then((data) => setProducts(data))
       .catch((err) => console.log(err));
@@ -29,6 +29,7 @@ function App() {
       setCart([...cart, product]);
     }
   }
+
   return (
     <div className="App">
       <NavBar searchChange={setSearch} cart={cart} />
@@ -39,6 +40,9 @@ function App() {
           element={
             <Home products={products} search={search} cartIt={addToCart} />
           }
+        />
+        <Route
+          path="/form" element={<Form />}
         />
         <Route
           path="/electronics"

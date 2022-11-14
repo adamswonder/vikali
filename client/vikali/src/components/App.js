@@ -1,6 +1,6 @@
 // import logo from '../logo.svg';
 import React, { useEffect, useState } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Form } from "react-router-dom";
 import Categories from "./Categories";
 import NavBar from "./Navbar";
 import Electronics from "./Electronics";
@@ -28,14 +28,14 @@ function App() {
   function addToCart(product) {
     console.log(product)
     if (!cart.includes(product)) {
-      setCounter(counter =+1)
+      setCounter(counter = +1)
       setCart([...cart, product]);
     }
   }
 
   return (
     <div className="App">
-      <NavBar searchChange={setSearch} counter={counter}/>
+      <NavBar searchChange={setSearch} counter={counter} />
       <Categories />
       <Routes>
         <Route
@@ -43,6 +43,9 @@ function App() {
           element={
             <Home products={products} search={search} cartIt={addToCart} />
           }
+        />
+        <Route
+          path="/form" element={<Form />}
         />
         <Route
           path="/electronics"

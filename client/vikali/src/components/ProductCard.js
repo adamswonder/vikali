@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
+import Form from './Form';
 import "./Products.css"
 import Popup from "./Popup";
 
@@ -11,9 +12,9 @@ export default function ProductCard({ product, cartIt }) {
     fetch("http://localhost:9292/reviews", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(reviews)
+      body: JSON.stringify()
     });
-  }, [reviews]);
+  }, []);
 
   // toggle effect
   const togglePopup = () => {
@@ -36,6 +37,7 @@ export default function ProductCard({ product, cartIt }) {
       <button id='review-btn' onClick={togglePopup}>Add Review</button>
       {isOpen && <Popup
         content={<>
+          <Form />
         </>}
         handleClose={togglePopup}
       />}

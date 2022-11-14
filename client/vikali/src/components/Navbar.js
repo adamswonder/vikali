@@ -17,7 +17,7 @@ function NavBar({searchChange, counter}) {
         <i class="fa-solid fa-user"></i> Account
       </NavLink>
       <NavLink to="/app/cart" className="cart">
-        <i class="fa-solid fa-cart-shopping"></i> {counter}Cart
+        <i class="fa-solid fa-cart-shopping">{counter}</i> Cart
       </NavLink>
     </div>
   );

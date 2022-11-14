@@ -5,8 +5,7 @@ function Categories() {
   let activeStyle = {
     color: "orange",
   };
-    return (
-      <nav className="categories">
+    return (      <nav className="categories">
         <NavLink to="/app/products" style={({isActive}) => isActive ? activeStyle : undefined}>
           Home
         </NavLink>
@@ -21,6 +20,9 @@ function Categories() {
         </NavLink>
         <NavLink to="/app/groceries" style={({isActive}) => isActive ? activeStyle : undefined}>
           Groceries
+        </NavLink>
+        <NavLink to="/app/form" style={({isActive}) => isActive ? activeStyle : undefined}>
+          Forms
         </NavLink>
       </nav>
     );

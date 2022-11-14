@@ -1,14 +1,14 @@
-import React from 'react'
-import './Footer.css'
+import React from "react";
+import "./Footer.css";
 
 export default function Footer() {
   return (
-    <div className='footer'>
-      <div className='footer-links'>
-        <div className='f-message'>
+    <div className="footer">
+      <div className="footer-links">
+        <div className="f-message">
           <h2>VIKALI</h2>
         </div>
-        <div className='f-social'>
+        <div className="f-social">
           <h3>Join Us</h3>
           <a href="/">
             <i class="fa-brands fa-facebook"></i>
@@ -25,7 +25,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="footer-links">
-        <div className='about'>
+        <div className="about">
           <h3>About Vikali</h3>
           <ul>
             <li>About Us</li>
@@ -34,7 +34,7 @@ export default function Footer() {
             <li>Terms and Conditions</li>
           </ul>
         </div>
-        <div className='about'>
+        <div className="about">
           <h3>Help</h3>
           <ul>
             <li>Help Center</li>
@@ -45,7 +45,7 @@ export default function Footer() {
             <li>Advertise with Vikali</li>
           </ul>
         </div>
-        <div className='about'>
+        <div className="about">
           <h3>Products</h3>
           <ul>
             <li>Electronics</li>
@@ -54,24 +54,35 @@ export default function Footer() {
             <li>Groceries</li>
           </ul>
         </div>
-        <div className='about'>
+        <div className="about">
           <h3>Payment Method</h3>
           <ul>
-            <li><i class="fa-brands fa-cc-visa"> Visa</i></li>
-            <li><i class="fa-brands fa-cc-mastercard"> MasterCard</i></li>
-            <li><i class="fa-brands fa-paypal"> Paypal</i></li>
+            <li>
+              <i class="fa-brands fa-cc-visa"> Visa</i>
+            </li>
+            <li>
+              <i class="fa-brands fa-cc-mastercard"> MasterCard</i>
+            </li>
+            <li>
+              <i class="fa-brands fa-paypal"> Paypal</i>
+            </li>
           </ul>
         </div>
-        <div className='subscribe'>
+        <div className="subscribe">
           <h3>Subscribe</h3>
           <p>Get out Newsletters</p>
-          <input type='email' placeholder='Enter your email' required />
-          <button id='btn' type="submit" name="" value="Subscribe">Subscribe</button>
+          <input type="email" placeholder="Enter your email" required />
+          <button id="btn" type="submit" name="" value="Subscribe">
+            Subscribe
+          </button>
         </div>
       </div>
       <div class="ending">
-        <p>© 2022 vikali.com or its affilliates | All rights reserved,terms and conditions applied</p>
+        <p>
+          © 2022 vikali.com or its affilliates | All rights reserved,terms and
+          conditions applied
+        </p>
       </div>
-    </div >
-  )
+    </div>
+  );
 }

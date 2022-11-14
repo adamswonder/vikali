@@ -1,6 +1,6 @@
 // import logo from '../logo.svg';
 import React, { useEffect, useState } from "react";
-import { BrowserRouter as Switch, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Categories from "./Categories";
 import NavBar from "./Navbar";
 import Electronics from "./Electronics";
@@ -8,72 +8,57 @@ import Fashion from "./Fashion";
 import Groceries from "./Groceries";
 import Shoes from "./Shoes";
 import Cart from "./Cart";
-import Home from './Home'
-import './App.css';
+import Home from "./Home";
+import "./App.css";
 import Footer from "./Footer";
 
 function App() {
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState([]);
-  const [search, setSearch] = useState("")
+  const [search, setSearch] = useState("");
 
   useEffect(() => {
     fetch("http://localhost:9292/products")
       .then((resp) => resp.json())
       .then((data) => setProducts(data))
       .catch((err) => console.log(err));
-  },[]);
-
+  }, []);
   function addToCart(product) {
+    console.log(product)
     if (!cart.includes(product)) {
-      setCart([...cart, product])
-      fetch("http://localhost:9292/cart", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(product)
-      });
+      setCart([...cart, product]);
     }
   }
   return (
     <div className="App">
-      {/* <Announcement /> */}
-      <NavBar searchChange={setSearch} />
+      <NavBar searchChange={setSearch} cart={cart} />
       <Categories />
-      <Switch>
-        <Route path="/products" exact>
-          <Home products={products} search={search} cartIt={addToCart} />
-        </Route>
-        <Route path="/electronics">
-          <Electronics products={products} cartIt={addToCart} />
-        </Route>
-        <Route path="/fashion">
-          <Fashion products={products} cartIt={addToCart} />
-        </Route>
-        <Route path="/shoes">
-          <Shoes products={products} cartIt={addToCart} />
-        </Route>
-        <Route path="/groceries">
-          <Groceries products={products} cartIt={addToCart} />
-        </Route>
-        <Route path="/cart">
-          <Cart products={cart} />
-        </Route>
-      </Switch> 
-      <Footer/>
-      {/* {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
+      <Routes>
+        <Route
+          path="/products"
+          element={
+            <Home products={products} search={search} cartIt={addToCart} />
+          }
+        />
+        <Route
+          path="/electronics"
+          element={<Electronics products={products} cartIt={addToCart} />}
+        />
+        <Route
+          path="/fashion"
+          element={<Fashion products={products} cartIt={addToCart} />}
+        />
+        <Route
+          path="/shoes"
+          element={<Shoes products={products} cartIt={addToCart} />}
+        />
+        <Route
+          path="/groceries"
+          element={<Groceries products={products} cartIt={addToCart} />}
+        />
+        <Route path="/cart" element={<Cart products={cart} />} />
+      </Routes>
+      <Footer />
     </div>
   );
 }

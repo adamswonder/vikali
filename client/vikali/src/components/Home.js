@@ -24,7 +24,7 @@ function Home({ products, cartIt, search }) {
                     {products
                         .filter(product => product.category === "Electronics" && product.discount >= 4)
                         .map(product => {
-                            return <ProductCard product={product} cartIt={cartIt} />
+                            return (<ProductCard product={product} cartIt={cartIt} />)
                         })
                     }
                 </div>

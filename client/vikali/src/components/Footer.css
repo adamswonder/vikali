@@ -19,7 +19,7 @@
 }
 
 .footer-links{
-     display: grid;
+    display: grid;
     grid-template-columns: 1.3fr repeat(1, 1fr) 1fr;
     padding-left: 30px;
     gap: 1.3rem;
@@ -28,13 +28,13 @@ li i{
     background-color: black;
 }
 .about{
-    
     /* padding: 30px; */
     font-size: large;
 }
 /* .subscribe{
     margin-left: 20px;
     display: flex;
+    height: 3px;
 } */
 
 

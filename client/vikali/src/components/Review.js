@@ -20,7 +20,7 @@ function Review() {
         })
             .then((resp) => resp.json())
             .then(() => {
-                setRating(0)
+                setRating([])
                 setReview("")
             })
     }
@@ -58,7 +58,7 @@ function Review() {
                         </form>
                     </div>
                     <div className="review-image">
-                        <img src="https://i.pinimg.com/564x/7d/6c/28/7d6c288597c1d4b3fe872fde1282eec0.jpg" width={300}></img>
+                        {/* <img src="https://i.pinimg.com/564x/7d/6c/28/7d6c288597c1d4b3fe872fde1282eec0.jpg" width={300} alt="img"></img> */}
                     </div>
                 </div>
                 <div className="reviews">
@@ -67,7 +67,7 @@ function Review() {
                             // display every user review after mapping
                             <div>
                                 <p key={review.id}>Rating: {review.rating}</p>
-                                <p>Review: {review.review}</p>
+                                <p>Review: {review.comment}</p>
                             </div>
                         )
                     })}

@@ -1,8 +1,9 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
-import Form from './Form';
+// import Form from './Form';
 import "./Products.css"
 import Popup from "./Popup";
+import Review from './Review';
 
 export default function ProductCard({ product, cartIt }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -37,7 +38,7 @@ export default function ProductCard({ product, cartIt }) {
       <button id='review-btn' onClick={togglePopup}>Add Review</button>
       {isOpen && <Popup
         content={<>
-          <Form />
+          <Review />
         </>}
         handleClose={togglePopup}
       />}

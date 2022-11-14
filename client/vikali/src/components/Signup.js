@@ -27,7 +27,6 @@ function Signup() {
       alert("Account created successfully.Proceed to Login");
       navigate("/");
     }
-    e.form.reset();
   }
   // Testing merge conflict
 
@@ -41,6 +40,7 @@ function Signup() {
           <div className="container">
             <label>Username : </label>
             <input
+              className="login-input"
               type="text"
               placeholder="Enter Username"
               name="name"
@@ -49,13 +49,16 @@ function Signup() {
             />
             <label>Password : </label>
             <input
+              className="login-input"
               type="password"
               placeholder="Enter Password"
               name="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
-            <button type="submit">Sign Up</button>
+            <button className="login-button" type="submit">
+              Sign Up
+            </button>
           </div>
         </form>
       </div>

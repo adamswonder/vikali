@@ -10,11 +10,11 @@ import Shoes from "./Shoes";
 import Cart from "./Cart";
 import Home from "./Home";
 import "./App.css";
+import Footer from "./Footer";
 
 function App() {
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState([]);
-  const [counter, setCounter] = useState(0)
   const [search, setSearch] = useState("");
 
   useEffect(() => {
@@ -23,19 +23,16 @@ function App() {
       .then((data) => setProducts(data))
       .catch((err) => console.log(err));
   }, []);
-
-  // this function adds product to cart
   function addToCart(product) {
     console.log(product)
     if (!cart.includes(product)) {
-      setCounter(counter = +1)
       setCart([...cart, product]);
     }
   }
 
   return (
     <div className="App">
-      <NavBar searchChange={setSearch} counter={counter} />
+      <NavBar searchChange={setSearch} cart={cart} />
       <Categories />
       <Routes>
         <Route
@@ -65,6 +62,7 @@ function App() {
         />
         <Route path="/cart" element={<Cart products={cart} />} />
       </Routes>
+      <Footer />
     </div>
   );
 }

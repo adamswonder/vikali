@@ -21,9 +21,6 @@ function Categories() {
         <NavLink to="/app/groceries" style={({isActive}) => isActive ? activeStyle : undefined}>
           Groceries
         </NavLink>
-        <NavLink to="/app/form" style={({isActive}) => isActive ? activeStyle : undefined}>
-          Forms
-        </NavLink>
       </nav>
     );
 }
